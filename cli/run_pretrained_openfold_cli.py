@@ -84,7 +84,6 @@ import tempfile
 
 
 def build_parser() -> argparse.ArgumentParser:
-    """Return the argument parser for the OpenFold inference CLI."""
 
     parser = argparse.ArgumentParser(
         prog="run_pretrained_openfold_cli",
@@ -600,7 +599,7 @@ def resolve_inputs(args: argparse.Namespace):
             file=sys.stderr,
         )
         sys.exit(2)
--
+        
     explicit_count = sum([
         args.fasta_dir is not None,
         args.sequence is not None,
